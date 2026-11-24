@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { MISSIONS } from './game/missions.js';
+import { MISSIONS } from '../game/missions.js';
 import {
   createBattle,
   moveUnit,
@@ -9,12 +9,12 @@ import {
   aiStep,
   reachableTiles,
   attackTargets,
-} from './game/engine.js';
-import MissionSelect from './ui/MissionSelect.jsx';
-import Battlefield from './ui/Battlefield.jsx';
-import Sidebar from './ui/Sidebar.jsx';
-import ResultModal from './ui/ResultModal.jsx';
-import { sfx } from './sfx.js';
+} from '../game/engine.js';
+import MissionSelect from '../ui/MissionSelect.jsx';
+import Battlefield from '../ui/Battlefield.jsx';
+import Sidebar from '../ui/Sidebar.jsx';
+import ResultModal from '../ui/ResultModal.jsx';
+import { sfx } from '../sfx.js';
 
 const STORAGE_KEY = 'ironfront.progress.v1';
 
