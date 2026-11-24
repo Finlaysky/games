@@ -584,6 +584,8 @@ function updateTraffic(g, dt) {
     car.x += Math.cos(car.angle) * car.speed * dt;
     car.y += Math.sin(car.angle) * car.speed * dt;
     collideCircle(g.collider, car, car.r * 0.8);
+    car.x = clamp(car.x, 46, CITY.w - 46);
+    car.y = clamp(car.y, 46, CITY.h - 46);
   }
 }
 
