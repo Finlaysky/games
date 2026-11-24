@@ -1,0 +1,281 @@
+/* SUNSET ARCADE — launcher screen */
+
+.shell {
+  position: relative;
+  min-height: 100vh;
+  padding: 46px 24px 34px;
+  background:
+    radial-gradient(900px 520px at 18% -10%, rgba(255, 138, 76, 0.24), transparent 65%),
+    radial-gradient(760px 480px at 88% 8%, rgba(90, 132, 255, 0.2), transparent 62%),
+    linear-gradient(180deg, #0a0d13, #0e131c 55%, #090b11);
+  color: #eef3fa;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.shell *,
+.shell *::before,
+.shell *::after {
+  box-sizing: border-box;
+}
+
+.shell-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(circle at 50% 20%, #000, transparent 78%);
+}
+
+.shell-head {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.shell-logo {
+  font-size: clamp(26px, 4.4vw, 40px);
+  font-weight: 900;
+  letter-spacing: 7px;
+  color: #fff;
+}
+
+.shell-logo span {
+  margin-left: 10px;
+  background: linear-gradient(92deg, #ff8a4c, #ffd166);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.shell-tag {
+  margin: 10px 0 0;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  color: #93a3ba;
+}
+
+.shell-games {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(25, 30, 41, 0.96), rgba(13, 16, 23, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 209, 102, 0.35);
+}
+
+.card-art {
+  position: relative;
+  height: 152px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #2a1f3d, #4a2a3c 58%, #1a1622);
+}
+
+.card.war .card-art {
+  background: linear-gradient(180deg, #2b3222, #3d4530 58%, #1b1f17);
+}
+
+.art-sun {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffd166, #ff7a4c);
+  box-shadow: 0 0 60px rgba(255, 138, 76, 0.65);
+}
+
+.art-skyline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 22px;
+  height: 62px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #10131b 0 22px,
+      transparent 22px 30px,
+      #10131b 30px 58px,
+      transparent 58px 64px
+    );
+  clip-path: polygon(0 100%, 0 34%, 8% 34%, 8% 12%, 16% 12%, 16% 46%, 26% 46%, 26% 6%, 36% 6%, 36% 52%, 46% 52%, 46% 26%, 58% 26%, 58% 4%, 70% 4%, 70% 44%, 80% 44%, 80% 20%, 90% 20%, 90% 52%, 100% 52%, 100% 100%);
+  opacity: 0.92;
+}
+
+.art-road {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24px;
+  background: #0b0e14;
+  border-top: 2px solid rgba(255, 209, 102, 0.5);
+}
+
+.art-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(190, 214, 160, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190, 214, 160, 0.16) 1px, transparent 1px);
+  background-size: 30px 30px;
+  transform: perspective(300px) rotateX(46deg) scale(1.6);
+  transform-origin: bottom;
+}
+
+.art-tanks {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  width: 120px;
+  height: 44px;
+  margin-left: -60px;
+  border-radius: 10px;
+  background: #39442c;
+  border: 2px solid #59683f;
+  box-shadow: -46px 8px 0 -6px #2f3a26, 46px 8px 0 -6px #6b3a2f;
+}
+
+.card-body {
+  padding: 22px 24px 26px;
+}
+
+.card-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  color: #ffb347;
+}
+
+.card.war .card-kicker {
+  color: #b8d38a;
+}
+
+.card-body h2 {
+  margin: 8px 0 10px;
+  font-size: clamp(26px, 3.6vw, 34px);
+  font-weight: 900;
+  letter-spacing: -0.8px;
+  color: #fff;
+}
+
+.card-body p {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #a9b8cb;
+}
+
+.card-feats {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+}
+
+.card-feats li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13px;
+  color: #c7d3e2;
+}
+
+.card-feats li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: #ffd166;
+}
+
+.card.war .card-feats li::before {
+  background: #a8c97a;
+}
+
+.card-btn {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(96deg, #ff8a4c, #ffb347);
+  color: #1a1006;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(255, 138, 76, 0.24);
+}
+
+.card-btn.alt {
+  background: linear-gradient(96deg, #8fae63, #c3d98c);
+  color: #141a0c;
+  box-shadow: 0 12px 26px rgba(143, 174, 99, 0.22);
+}
+
+.card-btn:hover {
+  filter: brightness(1.07);
+}
+
+.shell-foot {
+  position: relative;
+  max-width: 1080px;
+  margin: 26px auto 0;
+  text-align: center;
+  font-size: 12.5px;
+  color: #7d8da4;
+}
+
+.shell-foot b {
+  color: #cfdceb;
+}
+
+.shell-host {
+  min-height: 100vh;
+  background: #14160f;
+}
+
+.shell-back {
+  position: fixed;
+  z-index: 50;
+  top: 12px;
+  left: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(10, 12, 8, 0.78);
+  color: #e7edd8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.shell-back:hover {
+  background: rgba(255, 255, 255, 0.16);
+}

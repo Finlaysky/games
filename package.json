@@ -1,14 +1,14 @@
 {
-  "name": "iron-front",
+  "name": "sunset-arcade",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "IRON FRONT - a turn-based WW2 tactical war game",
+  "description": "SUNSET ARCADE - Sunset City (open-world GTA-style action) and IRON FRONT (turn-based WW2 tactics)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "start": "node server/index.js",
-    "test": "node --test src/game/engine.test.js",
+    "test": "node --test src/game/engine.test.js src/city/city.test.js",
     "preview": "vite preview"
   },
   "dependencies": {
