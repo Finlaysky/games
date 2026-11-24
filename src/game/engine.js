@@ -71,6 +71,11 @@ export function createBattle(missionId, seed = 20240607) {
       y,
       hp: t.hp,
       maxHp: t.hp,
+      atk: t.atk,
+      def: t.def,
+      move: t.move,
+      minRange: t.minRange,
+      maxRange: t.maxRange,
       moved: false,
       attacked: false,
     });
