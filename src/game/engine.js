@@ -314,6 +314,11 @@ export function recruit(state, side, typeId) {
     y: spot[1],
     hp: t.hp,
     maxHp: t.hp,
+    atk: t.atk,
+    def: t.def,
+    move: t.move,
+    minRange: t.minRange,
+    maxRange: t.maxRange,
     moved: false,
     attacked: false,
   });
