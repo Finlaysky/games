@@ -1,5 +1,12 @@
 /* SUNSET CITY — game chrome, HUD and menus */
 
+/* The game canvas fills a fixed shell, so give the document a real height. */
+html,
+body,
+#root {
+  height: 100%;
+}
+
 .sc-wrap {
   position: fixed;
   inset: 0;
